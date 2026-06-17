@@ -4,52 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wikantara - Ensiklopedia Bebas Nusantara</title>
-<style>
-body{font-family:Arial,sans-serif;background:#f8f9fa;margin:0;color:#202122}
-header{background:#fff;border-bottom:1px solid #ccc;padding:15px 20px}
-.logo{font-size:32px;font-weight:bold;color:#3366cc}
-.container{max-width:1200px;margin:auto;padding:20px}
-.card{background:#fff;border:1px solid #ddd;padding:20px}
-.search{width:100%;padding:10px;margin-top:10px}
-.grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
-.infobox{background:#eaecf0;padding:10px;border:1px solid #aaa}
-footer{text-align:center;padding:20px;color:#666}
-</style>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<div class="logo">Wikantara</div>
-<div>Ensiklopedia Bebas Nusantara</div>
-<input class="search" placeholder="Cari artikel...">
+    <div class="logo">Wikantara</div>
+    <div class="subtitle">Ensiklopedia Bebas Nusantara</div>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari tokoh, artis, musisi, ilmuwan..."
+        class="search"
+    >
 </header>
 
 <div class="container">
-<div class="grid">
-<div class="card">
-<h1>Selamat Datang di Wikantara</h1>
-<p>Wikantara adalah ensiklopedia bebas yang berisi artikel tentang Indonesia, dunia, sejarah, budaya, teknologi, dan ilmu pengetahuan.</p>
 
-<h2>Artikel Pilihan</h2>
-<ul>
-<li>Indonesia</li>
-<li>Majapahit</li>
-<li>Jakarta</li>
-<li>Albert Einstein</li>
-</ul>
+    <div class="card">
 
-<h2>Berita Wikantara</h2>
-<p>Proyek ensiklopedia sedang dalam pengembangan.</p>
+        <h1>Selamat Datang di Wikantara</h1>
+
+        <p>
+            Wikantara adalah ensiklopedia bebas yang memuat
+            biografi tokoh dunia, artis, musisi, ilmuwan,
+            atlet, politikus, dan berbagai artikel pengetahuan.
+        </p>
+
+        <h2>Daftar Tokoh</h2>
+
+        <ul id="figureList">
+            <li>Memuat data...</li>
+        </ul>
+
+    </div>
+
 </div>
 
-<div class="infobox">
-<h3>Statistik Wikantara</h3>
-<p>Artikel: 1</p>
-<p>Kategori: 0</p>
-<p>Pengguna: 0</p>
-</div>
-</div>
-</div>
+<footer>
+    © 2026 Wikantara
+</footer>
 
-<footer>© 2026 Wikantara</footer>
+<script>
+let semuaTokoh = [];
+
+fetch("figures.json")
+.then(response => response.json())
+.then(data => {
+
+    semuaTokoh = data;
+
+    tampilkanTokoh(data);
+
+});
+
+function tampilkanTokoh(data){
+
+    const list = document.getElementById("figureList");
+
+    list.innerHTML = "";
+
+    data.forEach(tokoh => {
+
+        list.innerHTML += `
+            <li>
+                <a href="figure.html?id=${tokoh.id}">
+                    ${tokoh.name}
+                </a>
+            </li>
+        `;
+
+    });
+
+}
+
+document.getElementById("searchInput")
+.addEventListener("keyup", function(){
+
+    const keyword = this.value.toLowerCase();
+
+    const hasil = semuaTokoh.filter(tokoh =>
+        tokoh.name.toLowerCase().includes(keyword)
+    );
+
+    tampilkanTokoh(hasil);
+
+});
+</script>
+
 </body>
 </html>
