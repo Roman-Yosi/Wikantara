@@ -4,185 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wikantara - Ensiklopedia Bebas Nusantara</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f8f9fa;
-    color:#202122;
-}
-
-header{
-    background:#ffffff;
-    border-bottom:1px solid #dadce0;
-    padding:15px 30px;
-}
-
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#3366cc;
-}
-
-.tagline{
-    color:#666;
-    margin-top:5px;
-}
-
-.search-box{
-    margin-top:15px;
-}
-
-.search-box input{
-    width:100%;
-    max-width:600px;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:6px;
-}
-
-.container{
-    display:flex;
-    min-height:calc(100vh - 80px);
-}
-
-.sidebar{
-    width:250px;
-    background:#fff;
-    border-right:1px solid #ddd;
-    padding:20px;
-}
-
-.sidebar h3{
-    margin-bottom:10px;
-}
-
-.sidebar a{
-    display:block;
-    text-decoration:none;
-    color:#3366cc;
-    padding:8px 0;
-}
-
-.sidebar a:hover{
-    text-decoration:underline;
-}
-
-.content{
-    flex:1;
-    padding:30px;
-}
-
-.article{
-    background:#fff;
-    padding:25px;
-    border-radius:8px;
-    box-shadow:0 2px 4px rgba(0,0,0,.05);
-}
-
-.article h1{
-    margin-bottom:15px;
-    border-bottom:1px solid #ddd;
-    padding-bottom:10px;
-}
-
-.article h2{
-    margin-top:20px;
-    margin-bottom:10px;
-}
-
-.article p{
-    line-height:1.7;
-}
-
-footer{
-    background:#fff;
-    border-top:1px solid #ddd;
-    text-align:center;
-    padding:20px;
-    color:#666;
-}
-
-@media(max-width:768px){
-    .container{
-        flex-direction:column;
-    }
-
-    .sidebar{
-        width:100%;
-        border-right:none;
-        border-bottom:1px solid #ddd;
-    }
-}
+body{font-family:Arial,sans-serif;background:#f8f9fa;margin:0;color:#202122}
+header{background:#fff;border-bottom:1px solid #ccc;padding:15px 20px}
+.logo{font-size:32px;font-weight:bold;color:#3366cc}
+.container{max-width:1200px;margin:auto;padding:20px}
+.card{background:#fff;border:1px solid #ddd;padding:20px}
+.search{width:100%;padding:10px;margin-top:10px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.infobox{background:#eaecf0;padding:10px;border:1px solid #aaa}
+footer{text-align:center;padding:20px;color:#666}
 </style>
-
 </head>
 <body>
-
 <header>
-    <div class="logo">Wikantara</div>
-    <div class="tagline">Ensiklopedia Bebas Nusantara</div>
-
-    <div class="search-box">
-        <input type="text" placeholder="Cari artikel di Wikantara...">
-    </div>
+<div class="logo">Wikantara</div>
+<div>Ensiklopedia Bebas Nusantara</div>
+<input class="search" placeholder="Cari artikel...">
 </header>
 
 <div class="container">
+<div class="grid">
+<div class="card">
+<h1>Selamat Datang di Wikantara</h1>
+<p>Wikantara adalah ensiklopedia bebas yang berisi artikel tentang Indonesia, dunia, sejarah, budaya, teknologi, dan ilmu pengetahuan.</p>
 
-    <aside class="sidebar">
-        <h3>Navigasi</h3>
+<h2>Artikel Pilihan</h2>
+<ul>
+<li>Indonesia</li>
+<li>Majapahit</li>
+<li>Jakarta</li>
+<li>Albert Einstein</li>
+</ul>
 
-        <a href="#">Halaman Utama</a>
-        <a href="#">Artikel Pilihan</a>
-        <a href="#">Kategori</a>
-        <a href="#">Sejarah</a>
-        <a href="#">Teknologi</a>
-        <a href="#">Sains</a>
-        <a href="#">Budaya</a>
-        <a href="#">Geografi</a>
-    </aside>
-
-    <main class="content">
-        <div class="article">
-
-            <h1>Selamat Datang di Wikantara</h1>
-
-            <p>
-                Wikantara adalah ensiklopedia bebas yang dibuat untuk
-                mengumpulkan dan menyebarkan pengetahuan bagi seluruh masyarakat.
-            </p>
-
-            <h2>Tentang Wikantara</h2>
-
-            <p>
-                Wikantara menyediakan artikel mengenai sejarah,
-                budaya, teknologi, ilmu pengetahuan, geografi,
-                dan berbagai topik lainnya.
-            </p>
-
-            <h2>Artikel Hari Ini</h2>
-
-            <p>
-                Indonesia adalah negara kepulauan terbesar di dunia
-                yang terdiri dari ribuan pulau dan memiliki keberagaman
-                budaya yang sangat kaya.
-            </p>
-
-        </div>
-    </main>
-
+<h2>Berita Wikantara</h2>
+<p>Proyek ensiklopedia sedang dalam pengembangan.</p>
 </div>
 
-<footer>
-    © 2026 Wikantara — Ensiklopedia Bebas Nusantara
-</footer>
+<div class="infobox">
+<h3>Statistik Wikantara</h3>
+<p>Artikel: 1</p>
+<p>Kategori: 0</p>
+<p>Pengguna: 0</p>
+</div>
+</div>
+</div>
 
+<footer>© 2026 Wikantara</footer>
 </body>
 </html>
