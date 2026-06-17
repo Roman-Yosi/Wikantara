@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Albert Einstein",
+    "type": "Ilmuwan",
+    "country": "Jerman",
+    "birth": "14 Maret 1879",
+    "death": "18 April 1955",
+    "image": "images/einstein.jpg",
+    "bio": "Albert Einstein adalah fisikawan teoretis yang mengembangkan teori relativitas."
+  },
+  {
+    "id": 2,
+    "name": "Michael Jackson",
+    "type": "Musisi",
+    "country": "Amerika Serikat",
+    "birth": "29 Agustus 1958",
+    "death": "25 Juni 2009",
+    "image": "images/michael-jackson.jpg",
+    "bio": "Michael Jackson adalah penyanyi, penulis lagu dan penari Amerika Serikat."
+  },
+  {
+    "id": 3,
+    "name": "Cristiano Ronaldo",
+    "type": "Atlet",
+    "country": "Portugal",
+    "birth": "5 Februari 1985",
+    "death": "-",
+    "image": "images/ronaldo.jpg",
+    "bio": "Cristiano Ronaldo adalah pemain sepak bola profesional Portugal."
+  }
+]
