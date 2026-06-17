@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Indonesia",
+    "category": "Negara",
+    "content": "Indonesia adalah negara kepulauan di Asia Tenggara yang terdiri atas lebih dari 17.000 pulau."
+  },
+  {
+    "id": 2,
+    "title": "Arab Saudi",
+    "category": "Negara",
+    "content": "Arab Saudi adalah negara di Asia Barat yang sebagian besar wilayahnya berada di Semenanjung Arab."
+  },
+  {
+    "id": 3,
+    "title": "Majapahit",
+    "category": "Sejarah",
+    "content": "Majapahit adalah kerajaan Hindu-Buddha yang pernah berkuasa di Nusantara."
+  }
+]
